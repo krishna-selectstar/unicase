@@ -2,11 +2,13 @@ use super::{fold::Fold, map::lookup};
 use core::array::IntoIter;
 use core::str::Chars;
 
+#[derive(Clone)]
 pub struct CanonicalIter<'a> {
     current: Fold,
     chars: Chars<'a>,
 }
 
+#[derive(Clone)]
 pub struct CanonicalIterBytes<'a> {
     current: IntoIter<u8, 4>,
     chars: CanonicalIter<'a>,

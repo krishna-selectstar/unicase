@@ -71,7 +71,7 @@ use core::ops::{Deref, DerefMut};
 use core::str::FromStr;
 
 use self::unicode::Unicode;
-pub use self::unicode::iter::CanonicalIter;
+pub use self::unicode::iter::{CanonicalIter, CanonicalIterBytes};
 
 mod ascii;
 mod unicode;

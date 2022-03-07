@@ -46,14 +46,14 @@ impl<S> Ascii<S> {
 impl<S> Deref for Ascii<S> {
     type Target = S;
     #[inline]
-    fn deref<'a>(&'a self) -> &'a S {
+    fn deref(&self) -> &S {
         &self.0
     }
 }
 
 impl<S> DerefMut for Ascii<S> {
     #[inline]
-    fn deref_mut<'a>(&'a mut self) -> &'a mut S {
+    fn deref_mut(&mut self) -> &mut S {
         &mut self.0
     }
 }
